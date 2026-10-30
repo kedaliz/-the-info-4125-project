@@ -1,0 +1,128 @@
+:root {
+  --primary: #1f4e79;
+  --accent: #e08a1e;
+  --bg: #f5f7fa;
+  --text: #222;
+  --card: #fff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 { margin: 0; font-size: 1.5rem; }
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.25rem;
+  font-weight: bold;
+}
+
+nav a:hover, nav a.active { color: var(--accent); }
+
+main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+
+.hero {
+  background: linear-gradient(135deg, var(--primary), #3a7ca5);
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero h2 { margin-top: 0; font-size: 2rem; }
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover { opacity: 0.9; }
+.btn.secondary { background: var(--primary); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.card img { width: 100%; height: 160px; object-fit: cover; background: #cfd8e3; }
+.card .body { padding: 1rem; flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
+.card h3 { margin: 0; }
+.price { color: var(--primary); font-weight: bold; }
+.card .actions { display: flex; gap: 0.5rem; margin-top: auto; }
+
+.detail {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.detail img { width: 100%; max-height: 380px; object-fit: cover; border-radius: 6px; background: #cfd8e3; }
+.detail ul { padding-left: 1.2rem; }
+
+form {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  max-width: 650px;
+}
+
+form label, form legend { display: block; font-weight: bold; margin-top: 1rem; }
+form input[type="text"], form input[type="email"], form select, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font: inherit;
+}
+form fieldset { border: none; padding: 0; margin: 0; }
+form .inline label { display: inline; font-weight: normal; margin-right: 1rem; }
+form .btn { margin-top: 1.5rem; }
+
+#survey-msg { margin-top: 1rem; color: green; font-weight: bold; }
+.empty { color: #666; }
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
