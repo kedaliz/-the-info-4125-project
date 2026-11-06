@@ -3,10 +3,167 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Property 3</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#fff8ef">
+  <meta name="description" content="Survey details and student ratings for 307 Eddy St in Collegetown, Ithaca.">
+  <title>307 Eddy St | Cornell Off-Campus Housing</title>
+  <link rel="stylesheet" href="css/property1.css">
 </head>
 <body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>HOME<span class="brand-dot">.</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="properties.html">Properties</a>
+      <a href="survey.html">Share your experience</a>
+      <a class="favorites-link" href="favorites.html"><span aria-hidden="true">&#9825;</span> Favorites</a>
+    </nav>
+  </header>
 
+  <main class="page-content">
+    <a class="back-link" href="properties.html"><span aria-hidden="true">&larr;</span> Back to all properties</a>
+
+    <section class="listing-heading" aria-labelledby="property-name">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span> STUDENT HOUSING SPOTLIGHT</div>
+        <h1 id="property-name">307 Eddy St</h1>
+        <p class="address"><span aria-hidden="true">&#9906;</span> Collegetown, Ithaca, NY</p>
+        <div class="rating-line">
+          <span class="rating-stars" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+          <strong>4.0 / 5</strong>
+          <a href="#reviews">1 survey response</a>
+          <span class="sample-tag">Lambrou Real Estate</span>
+        </div>
+      </div>
+      <button class="save-button" id="detail-fav" type="button" data-fav="3" aria-label="Add 307 Eddy St to favorites">
+        <span aria-hidden="true">&#9825;</span> Add to favorites
+      </button>
+    </section>
+
+    <section class="gallery" aria-label="307 Eddy Street property photos">
+      <div class="gallery-main photo">
+        <img src="photos/307Eddy-3.webp" alt="Exterior of the 307 Eddy Street apartment building">
+      </div>
+      <div class="gallery-side plan-side">
+        <div class="photo"><img src="photos/307+Eddy_LRE+(2).webp" alt="Floor plan for 307 Eddy Apartment 2, two bedrooms and one bath"></div>
+        <div class="photo"><img src="photos/307+Eddy_LRE+(4).webp" alt="Floor plan for 307 Eddy Apartment 6, three bedrooms and two baths"></div>
+      </div>
+      <span class="gallery-note">Exterior &amp; floor plans</span>
+    </section>
+
+    <div class="listing-layout">
+      <div class="listing-main">
+        <section class="overview section-block" aria-labelledby="overview-title">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">THE ESSENTIALS</span>
+              <h2 id="overview-title">A little more about the place</h2>
+            </div>
+            <span class="sample-note">1 survey response</span>
+          </div>
+          <p class="overview-copy">307 Eddy St is a Collegetown rental listed with Lambrou Real Estate. The survey response reported two bedrooms, two bathrooms, a 12-month lease, and monthly per-person rent between $1,200 and $1,400.</p>
+          <div class="facts">
+            <div class="fact">
+              <span class="fact-icon peach" aria-hidden="true">&#9671;</span>
+              <span><strong>2 bedrooms · 2 bathrooms</strong><small>Reported in survey response</small></span>
+            </div>
+            <div class="fact">
+              <span class="fact-icon teal" aria-hidden="true">&#8962;</span>
+              <span><strong>Collegetown</strong><small>Ithaca, New York</small></span>
+            </div>
+            <div class="fact">
+              <span class="fact-icon yellow" aria-hidden="true">&#9733;</span>
+              <span><strong>12-month lease</strong><small>Reported in survey response</small></span>
+            </div>
+            <div class="fact">
+              <span class="fact-icon lavender" aria-hidden="true">&#9825;</span>
+              <span><strong>$1,200–$1,400 / person</strong><small>Reported monthly rent range</small></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-block floor-plans" aria-labelledby="floor-plans-title">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">LANDLORD LISTING</span>
+              <h2 id="floor-plans-title">Floor plans</h2>
+            </div>
+            <a class="text-link" href="https://www.lambrourealestate.com/apartments/307-eddy-street" target="_blank" rel="noopener noreferrer">Official listing <span aria-hidden="true">&#8599;</span></a>
+          </div>
+          <div class="plan-grid"><figure><img src="photos/307+Eddy_LRE+(1).webp" alt="Floor plan for 307 Eddy Apartment 1, 1 bedroom · 1 bath"><figcaption><strong>Apartment 1</strong> 1 bedroom · 1 bath</figcaption></figure><figure><img src="photos/307+Eddy_LRE+(2).webp" alt="Floor plan for 307 Eddy Apartment 2, 2 bedrooms · 1 bath"><figcaption><strong>Apartment 2</strong> 2 bedrooms · 1 bath</figcaption></figure><figure><img src="photos/307+Eddy_LRE+(4).webp" alt="Floor plan for 307 Eddy Apartment 6, 3 bedrooms · 2 baths"><figcaption><strong>Apartment 6</strong> 3 bedrooms · 2 baths</figcaption></figure><figure><img src="photos/307+Eddy_LRE+(5).webp" alt="Floor plan for 307 Eddy Apartment 4, 5 bedrooms · 2 baths"><figcaption><strong>Apartment 4</strong> 5 bedrooms · 2 baths</figcaption></figure></div>
+          <p class="fine-print">Floor plans from Lambrou Real Estate; dimensions approximate. Exterior photo from the landlord site.</p>
+        </section>
+
+        <section class="section-block amenities" aria-labelledby="amenities-title">
+          <span class="section-kicker">SURVEY DETAILS</span>
+          <h2 id="amenities-title">Utilities and reported issues</h2>
+          <p>The respondent reported that laundry was not in-unit, water was included in rent, and utilities cost about $100 per person per month.</p>
+          <div class="response-callout">
+            <ul aria-label="Issues mentioned in the survey response">
+              <li><span class="issue-icon" aria-hidden="true">!</span><span>Leaks, dampness, or water damage</span></li>
+              <li><span class="issue-icon" aria-hidden="true">!</span><span>Heating or cooling issues</span></li>
+              <li><span class="issue-icon" aria-hidden="true">!</span><span>Broken appliances or fixtures</span></li>
+              <li><span class="issue-icon" aria-hidden="true">!</span><span>Excessive noise</span></li>
+              <li><span class="issue-icon" aria-hidden="true">!</span><span>Cleanliness issues before move-in</span></li>
+            </ul>
+          </div>
+          <p class="fine-print">Details are from one survey response for the 2025–2027 school years.</p>
+        </section>
+
+        <section class="section-block reviews" id="reviews" aria-labelledby="reviews-title">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">PROPERTY SCORES</span>
+              <h2 id="reviews-title">Ratings provided</h2>
+            </div>
+            <a class="text-link" href="survey.html">Write a review <span aria-hidden="true">&rarr;</span></a>
+          </div>
+          <div class="review-summary">
+            <strong class="review-score">4.0</strong>
+            <div>
+              <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              <span class="review-count">Overall Rating (out of 5) · 1 response</span>
+            </div>
+          </div>
+          <p class="scores-note">Category scores from one survey response.</p>
+          <ol class="score-list" aria-label="Property review scores">
+            <li><span>Composite Avg</span><strong>2.71</strong></li>
+            <li><span>Cleanliness</span><strong>2.0</strong></li>
+            <li><span>Landlord Comm.</span><strong>3.0</strong></li>
+            <li><span>Maintenance</span><strong>4.0</strong></li>
+            <li><span>Unit Condition</span><strong>4.0</strong></li>
+            <li><span>Location</span><strong>2.0</strong></li>
+            <li><span>Safety / Security</span><strong>2.0</strong></li>
+            <li><span>Perceived Value</span><strong>2.0</strong></li>
+            <li><span>Reviews</span><strong>1.0</strong></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="rent-card" aria-label="Rent and property details">
+        <span class="rent-label">MONTHLY RENT PER PERSON</span>
+        <div class="rent-amount">$1,200<span>–$1,400</span></div>
+        <span class="rent-period">1 survey response</span>
+        <div class="rent-divider"></div>
+        <div class="rent-rating">
+          <span class="rating-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+          <strong>4.0</strong>
+          <span>Overall rating</span>
+        </div>
+        <a class="contact-button" href="survey.html">Share your experience <span aria-hidden="true">&rarr;</span></a>
+        <p class="rent-note"><span aria-hidden="true">&#9432;</span> Survey-reported rent. Confirm current pricing and availability directly with the property manager.</p>
+        <div class="rent-card-footer"><span aria-hidden="true">&#10022;</span> Your next chapter starts here.</div>
+      </aside>
+    </div>
+
+    <section class="bottom-cta">
+      <div class="cta-icon" aria-hidden="true">&#10022;</div>
+      <div><h2>Have you lived here?</h2><p>Your experience can help another Cornell student find a better fit.</p></div>
+      <a href="survey.html">Leave a review <span aria-hidden="true">&rarr;</span></a>
+    </section>
+  </main>
+  <footer class="footer"><a href="index.html">HOME<span class="brand-dot">.</span></a><span>Student housing, with a little more insight.</span></footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

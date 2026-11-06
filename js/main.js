@@ -1,7 +1,7 @@
 const PROPERTIES = [
   { id: 1, name: "123 N Quarry St", price: "$1,400–$1,800 / month", page: "property1.html", img: "photos/123%20N%20Quarry.jpg", info: "Collegetown / Lower C-Town · 4.5 stars" },
-  { id: 2, name: "Lakeview Condo", price: "$2,300/mo", page: "property2.html", img: "https://placehold.co/600x400?text=Lakeview+Condo", info: "2 bed / 2 bath" },
-  { id: 3, name: "Downtown Loft", price: "$2,750/mo", page: "property3.html", img: "https://placehold.co/600x400?text=Downtown+Loft", info: "1 bed / 1 bath" },
+  { id: 2, name: "305 Eddy St", price: "$1,200–$1,400 / person / month", page: "property2.html", img: "photos/305Eddy-4.webp", info: "Collegetown · 4.0 stars · 2 responses" },
+  { id: 3, name: "307 Eddy St", price: "$1,200–$1,400 / person / month", page: "property3.html", img: "https://placehold.co/600x400?text=307+Eddy+St", info: "Collegetown · 4.0 stars · 1 response" },
   { id: 4, name: "Suburban Family Home", price: "$3,400/mo", page: "property4.html", img: "https://placehold.co/600x400?text=Family+Home", info: "4 bed / 3 bath" },
 ];
 

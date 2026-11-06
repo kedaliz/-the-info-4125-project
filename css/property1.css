@@ -179,6 +179,21 @@ h1 { margin: 7px 0 4px; font-size: clamp(29px, 4vw, 39px); font-weight: 800; let
 .photo::after { position: absolute; inset: 0; background: linear-gradient(0deg, rgba(28, 29, 40, 0.22), transparent 40%); content: ""; }
 .photo-main { background-color: #dfc7a8; }
 .photo-bedroom { background-color: #c9d1c3; }
+.property2-gallery .gallery-side { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); }
+.floor-plan-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 20px; margin-top: 18px; padding: 15px; border: 1px solid var(--line); border-radius: 12px; background: #fffdfa; }
+.floor-plan-card > img { display: block; width: 100%; max-height: 340px; object-fit: contain; }
+.floor-plan-card > div > strong { font-family: "Manrope", sans-serif; font-size: 13px; }
+.floor-plan-card p { margin: 8px 0 12px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.tour-links { display: grid; gap: 7px; }
+.tour-links a, .fine-print a { color: var(--brand); font-size: 11px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.floor-plans .fine-print { margin-top: 15px; color: #9298a5; font-size: 10px; }
+.photo-credit { margin: 8px 0 0; color: var(--muted); font-size: 10px; }
+.photo-credit a { color: var(--brand); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.property-placeholder { display: grid; place-items: center; background: linear-gradient(135deg, #d6e5dc, #b8c9c4 48%, #eee0cc); color: #fff; text-align: center; }
+.property-placeholder:nth-child(2) { background: linear-gradient(135deg, #ecd8c7, #c8d6ca); }
+.property-placeholder:nth-child(3) { background: linear-gradient(135deg, #c8d9dc, #e8d8c6); }
+.property-placeholder > span { position: relative; z-index: 1; padding: 14px; font-family: "Manrope", sans-serif; font-size: 15px; font-weight: 800; text-shadow: 0 1px 5px rgba(29, 43, 83, 0.35); }
+.property-placeholder small { display: block; margin-top: 5px; font-family: "DM Sans", sans-serif; font-size: 10px; font-weight: 500; }
 .photo-caption { position: absolute; z-index: 1; bottom: 21px; left: 24px; color: #fff; font-family: "Manrope", sans-serif; font-size: 17px; font-weight: 700; }
 .photo-caption-icon { margin-right: 7px; color: var(--sun); }
 .photo-count { position: absolute; z-index: 1; right: 13px; bottom: 13px; padding: 6px 10px; border-radius: 7px; background: rgba(255, 255, 255, 0.93); color: var(--ink); font-size: 10px; font-weight: 700; }
@@ -290,6 +305,8 @@ h2 { margin: 5px 0 0; font-size: 21px; font-weight: 800; letter-spacing: -0.55px
   .save-button { margin-top: 14px; }
   .gallery { height: 235px; grid-template-columns: 1fr; }
   .gallery-side { display: none; }
+  .property2-gallery { height: 430px; grid-template-rows: 1fr 1fr; }
+  .property2-gallery .gallery-side { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); }
   .gallery-note { top: auto; right: 10px; bottom: 10px; }
   .photo-caption { bottom: 16px; left: 15px; font-size: 14px; }
   .facts { grid-template-columns: 1fr; gap: 13px; }
@@ -297,6 +314,8 @@ h2 { margin: 5px 0 0; font-size: 21px; font-weight: 800; letter-spacing: -0.55px
   .score-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .response-callout ul { grid-template-columns: 1fr; }
   .response-callout li { min-height: 48px; }
+  .property2-gallery .gallery-side { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); }
+  .floor-plan-card { grid-template-columns: 1fr; gap: 12px; }
   .section-heading { align-items: flex-start; }
   h2 { font-size: 18px; }
   .sample-note { white-space: nowrap; }
@@ -308,3 +327,12 @@ h2 { margin: 5px 0 0; font-size: 21px; font-weight: 800; letter-spacing: -0.55px
   .bottom-cta > a { margin-left: 54px; }
   .footer { padding: 18px 15px; }
 }
+
+.plan-side { grid-template-rows: 1fr 1fr; }
+.plan-side .photo { background: #fff; }
+.plan-side .photo img { object-fit: contain; }
+.plan-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+.plan-grid figure { margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 12px; background: #fffdfa; }
+.plan-grid img { display: block; width: 100%; height: auto; }
+.plan-grid figcaption { margin-top: 6px; color: var(--muted); font-size: 11px; }
+@media (max-width: 520px) { .plan-grid { grid-template-columns: 1fr; } }
