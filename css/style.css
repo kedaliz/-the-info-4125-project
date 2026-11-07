@@ -81,6 +81,8 @@ main { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
 }
 
 .card img { width: 100%; height: 160px; object-fit: cover; background: #cfd8e3; }
+.card .img { height: 160px; overflow: hidden; background: #cfd8e3; }
+.card .img img { display: block; height: 100%; }
 .card .body { padding: 1rem; flex: 1; display: flex; flex-direction: column; gap: 0.4rem; }
 .card h3 { margin: 0; }
 .price { color: var(--primary); font-weight: bold; }

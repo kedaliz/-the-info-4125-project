@@ -329,6 +329,7 @@ h2 { margin: 5px 0 0; font-size: 21px; font-weight: 800; letter-spacing: -0.55px
 }
 
 .plan-side { grid-template-rows: 1fr 1fr; }
+.plan-side .photo:only-child { grid-row: 1 / -1; }
 .plan-side .photo { background: #fff; }
 .plan-side .photo img { object-fit: contain; }
 .plan-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }

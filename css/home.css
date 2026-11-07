@@ -285,6 +285,7 @@ h2, h3 { color: var(--ink); }
 .home-places .cards, .home-places .cards { grid-template-columns: 1fr; }
 .home-places > div { min-width: 0; }
 .home-places .card .img { background: none; }
+.home-places > div .card .img { background: linear-gradient(135deg, #e4572e, #ff9f6b); }
 .empty-area { margin: 8px 0 0; padding: 22px 14px; border: 1.5px dashed #e3d6c4; border-radius: 12px; color: #8a8fa0; font-size: 12px; text-align: center; background: #fffaf3; }
 .home-places > div:nth-of-type(1) .img { background: linear-gradient(135deg, #e4572e, #ff9f6b); }
 .catalog-intro { position: relative; overflow: hidden; padding: 40px 36px; }

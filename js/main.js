@@ -2,7 +2,8 @@ const PROPERTIES = [
   { id: 1, name: "123 N Quarry St", price: "$1,400–$1,800 / month", page: "property1.html", img: "photos/123%20N%20Quarry.jpg", info: "Collegetown / Lower C-Town · 4.5 stars" },
   { id: 2, name: "305 Eddy St", price: "$1,200–$1,400 / person / month", page: "property2.html", img: "photos/305Eddy-4.webp", info: "Collegetown · 4.0 stars · 2 responses" },
   { id: 3, name: "307 Eddy St", price: "$1,200–$1,400 / person / month", page: "property3.html", img: "https://placehold.co/600x400?text=307+Eddy+St", info: "Collegetown · 4.0 stars · 1 response" },
-  { id: 4, name: "Suburban Family Home", price: "$3,400/mo", page: "property4.html", img: "https://placehold.co/600x400?text=Family+Home", info: "4 bed / 3 bath" },
+  { id: 4, name: "202 Stewart Ave", price: "$1,000–$1,200 / person / month", page: "property4.html", img: "photos/202-stewart-exterior.png", info: "Collegetown · 2.57 / 5 · 1 response" },
+  { id: 5, name: "710 Stewart Ave", price: "$1,200–$1,400 / person / month", page: "property5.html", img: "photos/710-stewart-exterior.png", info: "University Hill · 3.43 / 5 · 1 response" },
 ];
 
 const KEY = "favorites";
@@ -23,7 +24,7 @@ function propertyCard(p, showRemove) {
   const label = showRemove ? "Remove" : isFav ? "Unfavorite" : "Favorite";
   return `
     <article class="card">
-      <img src="${p.img}" alt="${p.name}">
+      <div class="img"><img src="${p.img}" alt="${p.name}"></div>
       <div class="body">
         <h3>${p.name}</h3>
         <span class="price">${p.price}</span>
