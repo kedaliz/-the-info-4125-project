@@ -4,9 +4,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Survey</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/survey.css">
 </head>
 <body>
+<div class="page">
+  <header class="topbar">
+    <span class="brand">APP NAME</span>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="properties.html">Properties</a>
+      <a href="#">About</a>
+      <a href="survey.html" class="active">Survey</a>
+      <a href="favorites.html" class="fav-btn">&#9825; Favorites</a>
+    </nav>
+  </header>
 
+  <main class="sv-main">
+    <div class="sv-hero">
+      <span class="sv-kicker">STUDENT SURVEY</span>
+      <h1>Rate Your Cornell Off-Campus Housing.</h1>
+      <p class="sv-intro">Your feedback helps other Cornell students understand off-campus housing options and compare student experiences.</p>
+      <p class="sv-note">Intended as an anonymous submission. Do not include names, contact details or other sensitive personal information.</p>
+    </div>
+
+    <!-- Fieldsets with data-opts get their radio/checkbox options built by the script below -->
+    <form id="survey-form">
+      <section class="sv-section">
+        <div class="sv-head"><span class="sv-letter">A</span><div><h2>Student information</h2><p>Share broad student context only; no name, email or student ID is requested.</p></div></div>
+        <fieldset class="sv-q" data-name="status" data-opts="Current undergraduate|Former undergraduate"><legend>Cornell undergraduate status</legend></fieldset>
+        <fieldset class="sv-q" data-name="year" data-opts="First year|Sophomore|Junior|Senior|Other / prefer not to say"><legend>Academic year during this housing experience</legend></fieldset>
+      </section>
+
+      <section class="sv-section">
+        <div class="sv-head"><span class="sv-letter">B</span><div><h2>Property information</h2><p>Describe the off-campus rental and the period you lived there. Sample hints below are illustrative.</p></div></div>
+        <div class="sv-grid">
+          <label>Property name<input name="propName" placeholder="e.g. Sample Property A"></label>
+          <label>Property address<input name="propAddress" placeholder="e.g. 120 Example Lane (fictional)"></label>
+          <label>Neighborhood / location<select name="neighborhood"><option value="">Select one</option><option>Collegetown</option><option>Cayuga Heights</option><option>Downtown Ithaca</option><option>Varna</option></select></label>
+          <label>Landlord / property manager<input name="landlord" placeholder="e.g. Example Property Manager"></label>
+          <label>Monthly rent per person ($)<input name="rent" type="number" min="0" placeholder="Enter monthly amount"></label>
+          <label>Bedrooms in unit<select name="bedrooms"><option value="">Select number</option><option>Studio</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option></select></label>
+          <label>Bathrooms in unit<select name="bathrooms"><option value="">Select number</option><option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3</option><option>4+</option></select></label>
+          <label>Academic year / tenancy period<input name="tenancy" placeholder="e.g. Aug 2025 – May 2026"></label>
+          <label>Lease length<input name="leaseLength" placeholder="e.g. 10 months"></label>
+        </div>
+      </section>
+
+      <section class="sv-section">
+        <div class="sv-head"><span class="sv-letter">C</span><div><h2>Rate housing experience</h2><p>Use the same five-point scale for every category. Leave a row blank if you cannot assess it.</p></div></div>
+        <table class="sv-table">
+          <thead><tr><th>Housing category</th><th>1 · Very poor</th><th>2 · Poor</th><th>3 · Fair</th><th>4 · Good</th><th>5 · Very good</th></tr></thead>
+          <tbody id="rating-rows"></tbody>
+        </table>
+        <label>Comments on ratings (optional)<textarea name="ratingComments" placeholder="Add context about maintenance, condition, communication or other ratings. Do not include personal details."></textarea></label>
+      </section>
+
+      <section class="sv-section">
+        <div class="sv-head"><span class="sv-letter">D</span><div><h2>Additional questions</h2><p>Add practical details that would help another student understand the rental.</p></div></div>
+        <fieldset class="sv-q" data-name="findDifficulty" data-opts="Very easy|Easy|Neither easy nor difficult|Difficult|Very difficult"><legend>How difficult was it to find this property?</legend></fieldset>
+        <fieldset class="sv-q" data-name="utilities" data-type="checkbox" data-opts="Water|Heat|Electricity|Internet|None|Not sure"><legend>Utilities included in rent (select all that apply)</legend></fieldset>
+        <div class="sv-grid sv-grid-2">
+          <label>Security deposit amount ($)<input name="deposit" placeholder="Amount, none or not sure"></label>
+          <label>Unexpected fees (optional)<input name="fees" placeholder="None, not sure, or fee type and amount"></label>
+        </div>
+        <fieldset class="sv-q" data-name="amenities" data-type="checkbox" data-opts="Laundry|Parking|Furnished|Bike storage|Outdoor space|None / not sure"><legend>Amenities available (select all that apply)</legend></fieldset>
+        <fieldset class="sv-q" data-name="moveIn" data-opts="Ready to move in|Minor cleaning / repairs needed|Major issues|Not sure"><legend>Housing conditions at move-in</legend></fieldset>
+        <fieldset class="sv-q" data-name="issues" data-type="checkbox" data-opts="Noise|Heating / cooling|Plumbing|Pests|Maintenance delays|None|Other"><legend>Issues encountered (select all that apply)</legend></fieldset>
+        <label>Additional context on conditions or issues (optional)<textarea name="conditionContext" placeholder="Describe the housing experience without identifying individuals."></textarea></label>
+        <fieldset class="sv-q" data-name="recommend" data-opts="Yes|No|Not sure"><legend>Would you recommend this property to another student?</legend></fieldset>
+      </section>
+
+      <section class="sv-section">
+        <div class="sv-head"><span class="sv-letter">E</span><div><h2>Overall experience and confirmation</h2><p>Summarize your experience and confirm your response before the intended submission step.</p></div></div>
+        <fieldset class="sv-q" data-name="satisfaction" data-opts="Very dissatisfied|Dissatisfied|Neither satisfied nor dissatisfied|Satisfied|Very satisfied"><legend>Overall satisfaction</legend></fieldset>
+        <label>Final comments (optional)<textarea name="finalComments" placeholder="What else would you want another Cornell student to know? Please omit personal or sensitive information."></textarea></label>
+        <fieldset class="sv-q"><legend>Confirmation</legend>
+          <div class="sv-options"><label><input type="checkbox" id="confirm"> I confirm this response is accurate and truthful to the best of my knowledge.</label></div>
+        </fieldset>
+        <div class="sv-submit-row"><button class="sv-submit">Submit Review</button><span id="status" role="status"></span></div>
+      </section>
+    </form>
+  </main>
+</div>
+
+<script>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhDU4Cbm6wpvB8KTybZxoNkuptK_aaKzQGAaikFnygqzuzbo5Cg_BlCdPJGSzN8j8/exec";
+  const opt = (type, name, value, label = value) =>
+    `<label><input type="${type}" name="${name}" value="${value}" aria-label="${label}"> ${value}</label>`;
+
+  // Radio/checkbox option groups
+  document.querySelectorAll("[data-opts]").forEach(fs => {
+    const { name, type = "radio", opts } = fs.dataset;
+    fs.insertAdjacentHTML("beforeend",
+      `<div class="sv-options">${opts.split("|").map(o => opt(type, name, o)).join("")}</div>`);
+  });
+
+  // Rating rows: 7 categories x 5 radios
+  ["Cleanliness", "Landlord communication", "Maintenance", "Condition of the unit",
+   "Location", "Safety/security", "Overall value / worth the rent"].forEach(cat => {
+    const name = "rating_" + cat.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+    document.getElementById("rating-rows").insertAdjacentHTML("beforeend",
+      `<tr><th>${cat}</th>${[1, 2, 3, 4, 5].map(n => `<td>${opt("radio", name, n, `${cat}: ${n}`)}</td>`).join("")}</tr>`);
+  });
+
+  // Submit to Google Sheets
+  const form = document.getElementById("survey-form"), status = document.getElementById("status");
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!form.confirm.checked) return status.textContent = "Please check the confirmation box first.";
+    const btn = form.querySelector("button");
+    btn.disabled = true;
+    status.textContent = "Submitting…";
+    try {
+      await fetch(SCRIPT_URL, { method: "POST", mode: "no-cors", body: new FormData(form) });
+      form.reset();
+      status.textContent = "Thanks! Your review was submitted.";
+    } catch {
+      status.textContent = "Something went wrong. Please try again.";
+    }
+    btn.disabled = false;
+  });
+</script>
 </body>
 </html>

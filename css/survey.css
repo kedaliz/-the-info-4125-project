@@ -1,0 +1,64 @@
+/* Survey page. Load after home.css (header, fonts, --ink/--brand/--teal/--sun/--cream). */
+.sv-main { max-width: 960px; margin: 0 auto; padding: 40px 6vw 80px; }
+
+/* Intro card */
+.sv-hero { position: relative; overflow: hidden; margin-bottom: 28px; padding: 36px 34px; border: 1px solid #f0e5d7; border-radius: 18px; background: linear-gradient(115deg, #fff5e9, #f1faf6); }
+.sv-hero::after { content: ""; position: absolute; right: -50px; top: -50px; width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, #ffd9b8, transparent 70%); }
+.sv-hero > * { position: relative; z-index: 1; }
+.sv-kicker { padding: 3px 10px; border-radius: 99px; background: #ffe9d6; color: #c2410c; font-size: 10px; font-weight: 800; letter-spacing: 1.2px; }
+.sv-main h1 { margin: 10px 0 8px; font-size: 34px; letter-spacing: -1px; line-height: 1.15; }
+.sv-intro { max-width: 600px; margin: 0 0 10px; color: #606981; font-size: 15px; }
+.sv-note { display: inline-block; margin: 0; padding: 7px 12px; border: 1px solid var(--sun); border-radius: 8px; background: #fff3d6; color: #7a5a00; font-size: 12px; }
+
+/* Section cards */
+.sv-section { margin-bottom: 22px; padding: 26px; border: 1px solid #f0e9df; border-radius: 15px; background: #fff; box-shadow: 0 5px 18px rgba(29, 43, 83, .08); }
+.sv-head { display: flex; gap: 14px; margin-bottom: 22px; padding-bottom: 16px; border-bottom: 1px solid #f1efea; }
+.sv-head h2 { margin: 2px 0 4px; font-size: 20px; }
+.sv-head p { margin: 0; color: #737b91; font-size: 12px; }
+.sv-letter { display: grid; flex-shrink: 0; width: 36px; height: 36px; place-items: center; border-radius: 11px; background: var(--brand); color: #fff; font-weight: 800; transform: rotate(-4deg); }
+.sv-section:nth-child(2) .sv-letter,
+.sv-section:nth-child(3) .sv-letter,
+.sv-section:nth-child(4) .sv-letter { background: #e4572e; }
+
+/* Labels + fields (inputs sit inside their <label>) */
+.sv-q { margin: 0 0 22px; padding: 0; border: 0; }
+.sv-q legend, .sv-section > label, .sv-grid > label { display: block; margin-bottom: 20px; padding: 0; font-size: 13px; font-weight: 700; }
+.sv-q legend { margin-bottom: 9px; }
+.sv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 18px; }
+.sv-grid-2 { grid-template-columns: 1fr 1fr; }
+.sv-main input:not([type=radio]):not([type=checkbox]), .sv-main select, .sv-main textarea { display: block; width: 100%; margin-top: 9px; padding: 11px 12px; border: 1px solid #e3e6f0; border-radius: 9px; background: #f3f5fb; color: var(--ink); font: inherit; font-size: 13px; font-weight: 400; }
+.sv-main textarea { min-height: 80px; resize: vertical; }
+.sv-main :is(input, select, textarea):focus { outline: none; border-color: var(--brand); background: #fff; box-shadow: 0 0 0 3px rgba(23, 163, 152, .18); }
+
+/* Option chips */
+.sv-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.sv-options label { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border: 1px solid #e6e1d8; border-radius: 99px; background: #fffdfa; color: #515c74; font-size: 12px; font-weight: 600; cursor: pointer; }
+.sv-options label:hover { border-color: #f1c3ae; background: #fff7f2; }
+.sv-options label:has(:checked) { border-color: var(--brand); background: #fff0e8; color: var(--brand-dark); }
+.sv-main [type=radio], .sv-main [type=checkbox] { margin: 0; accent-color: var(--brand); }
+
+/* Rating table */
+.sv-table { width: 100%; margin-bottom: 22px; border-spacing: 0; font-size： 12px; }
+.sv-table thead th { padding: 10px 8px; background: var(--cream); color: #a56a34; font-size: 11px; }
+.sv-table thead th:first-child { border-radius: 9px 0 0 9px; }
+.sv-table thead th:last-child { border-radius: 0 9px 9px 0; }
+.sv-table th:first-child { padding-left: 12px; text-align: left; }
+.sv-table tbody :is(th, td) { padding: 12px 8px; border-bottom: 1px solid #f1efea; font-weight: 600; text-align: center; }
+.sv-table tbody tr:hover { background: #fffaf3; }
+.sv-table label { display: inline-flex; gap: 5px; color: #737b91; cursor: pointer; }
+
+/* Submit */
+.sv-submit-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+.sv-submit { padding: 12px 30px; border: 0; border-radius: 99px; background: var(--brand); color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 6px 16px rgba(228, 87, 46, .28); }
+.sv-submit:hover { background: var(--brand-dark); }
+.sv-submit:disabled { opacity: .6; }
+#status { color: var(--teal); font-size: 13px; font-weight: 600; }
+.sv-submit:focus-visible, .sv-options label:has(:focus-visible) { outline: 3px solid #ffbd92; outline-offset: 3px; }
+
+@media (max-width: 760px) {
+  .sv-main { padding: 24px 20px 48px; }
+  .sv-hero, .sv-section { padding: 22px 18px; }
+  .sv-main h1 { font-size: 27px; }
+  .sv-grid, .sv-grid-2 { grid-template-columns: 1fr; }
+  .sv-table { display: block; overflow-x: auto; }
+}
