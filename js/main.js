@@ -6,6 +6,7 @@ const PROPERTIES = [
   { id: 5, name: "710 Stewart Ave", price: "$1,200–$1,400 / person / month", page: "property5.html", img: "photos/710-stewart-exterior.png", info: "University Hill · 3.43 / 5 · 1 response" },
   { id: 6, name: "404 University Ave", price: "$1,200–$1,400 / person / month", page: "property6.html", img: "https://placehold.co/600x400?text=404+University+Ave", info: "University Hill · 5.0 / 5 · 1 response" },
   { id: 7, name: "512 University Ave", price: "$700–$1,000 / person / month", page: "property7.html", img: "photos/512-university-exterior.png", info: "Fall Creek / University Hill · 3.0 / 5 · 1 response" },
+  { id: 8, name: "205 Dryden Rd", price: "$1,400–$1,600 / person / month", page: "property8.html", img: "https://placehold.co/600x400?text=205+Dryden+Rd", info: "Collegetown · 5.0 / 5 · 1 response" },
 ];
 
 const KEY = "favorites";
