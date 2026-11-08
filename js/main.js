@@ -4,6 +4,7 @@ const PROPERTIES = [
   { id: 3, name: "307 Eddy St", price: "$1,200–$1,400 / person / month", page: "property3.html", img: "https://placehold.co/600x400?text=307+Eddy+St", info: "Collegetown · 4.0 stars · 1 response" },
   { id: 4, name: "202 Stewart Ave", price: "$1,000–$1,200 / person / month", page: "property4.html", img: "photos/202-stewart-exterior.png", info: "Collegetown · 2.57 / 5 · 1 response" },
   { id: 5, name: "710 Stewart Ave", price: "$1,200–$1,400 / person / month", page: "property5.html", img: "photos/710-stewart-exterior.png", info: "University Hill · 3.43 / 5 · 1 response" },
+  { id: 6, name: "404 University Ave", price: "$1,200–$1,400 / person / month", page: "property6.html", img: "https://placehold.co/600x400?text=404+University+Ave", info: "University Hill · 5.0 / 5 · 1 response" },
 ];
 
 const KEY = "favorites";
