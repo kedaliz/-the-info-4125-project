@@ -307,6 +307,8 @@ h2 { margin: 5px 0 0; font-size: 21px; font-weight: 800; letter-spacing: -0.55px
   .gallery-side { display: none; }
   .property2-gallery { height: 430px; grid-template-rows: 1fr 1fr; }
   .property2-gallery .gallery-side { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); }
+  .property7-gallery { height: 430px; grid-template-rows: 1fr 1fr; }
+  .property7-gallery .gallery-side { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: 1fr; gap: 4px; }
   .gallery-note { top: auto; right: 10px; bottom: 10px; }
   .photo-caption { bottom: 16px; left: 15px; font-size: 14px; }
   .facts { grid-template-columns: 1fr; gap: 13px; }
