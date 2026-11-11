@@ -3,8 +3,8 @@
 :root {
   --ink: #1d2b53;
   --muted: #737b91;
-  --brand: #e4572e;
-  --brand-dark: #c2431f;
+  --brand: #b31b1b;
+  --brand-dark: #8e1515;
   --teal: #17a398;
   --sun: #ffc857;
   --cream: #fff8ef;
@@ -18,7 +18,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: #fff;
+  background: #fff6f5;
   color: var(--ink);
   font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
   font-size: 15px;
@@ -52,6 +52,9 @@ button { font: inherit; }
   font-weight: 800;
   letter-spacing: 1px;
 }
+.brand-copy { display: flex; flex-direction: column; gap: 0; letter-spacing: 0; }
+.brand-copy .brand-title { color: var(--brand); font-size: 17px; line-height: 1.15; }
+.brand-copy .brand-subtitle { color: #705050; font-family: "DM Sans", "Segoe UI", Arial, sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 1.4px; line-height: 1.35; text-transform: uppercase; }
 
 .brand-mark {
   display: grid;

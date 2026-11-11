@@ -18,7 +18,7 @@
 .sv-letter { display: grid; flex-shrink: 0; width: 36px; height: 36px; place-items: center; border-radius: 11px; background: var(--brand); color: #fff; font-weight: 800; transform: rotate(-4deg); }
 .sv-section:nth-child(2) .sv-letter,
 .sv-section:nth-child(3) .sv-letter,
-.sv-section:nth-child(4) .sv-letter { background: #e4572e; }
+.sv-section:nth-child(4) .sv-letter { background: var(--brand); }
 
 /* Labels + fields (inputs sit inside their <label>) */
 .sv-q { margin: 0 0 22px; padding: 0; border: 0; }
@@ -49,7 +49,7 @@
 
 /* Submit */
 .sv-submit-row { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
-.sv-submit { padding: 12px 30px; border: 0; border-radius: 99px; background: var(--brand); color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 6px 16px rgba(228, 87, 46, .28); }
+.sv-submit { padding: 12px 30px; border: 0; border-radius: 99px; background: var(--brand); color: #fff; font-weight: 700; cursor: pointer; box-shadow: 0 6px 16px rgba(179, 27, 27, .28); }
 .sv-submit:hover { background: var(--brand-dark); }
 .sv-submit:disabled { opacity: .6; }
 #status { color: var(--teal); font-size: 13px; font-weight: 600; }

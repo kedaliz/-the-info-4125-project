@@ -3,10 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Favorites</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="View and manage your saved Cornell-area student rentals.">
+  <title>Favorites | The Red Door</title>
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-title">The Red Door</span><span class="brand-subtitle">Big Red Reviews</span></a>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="survey.html">Survey</a>
+        <a href="favorites.html" class="fav-btn active" aria-current="page">&#9829; Favorites</a>
+      </nav>
+    </header>
 
+    <main class="content favorites-page">
+      <noscript>Enable JavaScript to see saved properties and sample favorites.</noscript>
+      <section class="favorites-intro">
+        <span class="listing-kicker">YOUR SHORTLIST</span>
+        <h1>Your favorite places</h1>
+        <p>See the properties and property managers you’ve saved. Your shortlist stays on this device.</p>
+        <a class="browse-link" href="properties.html">Explore all properties <span aria-hidden="true">&rarr;</span></a>
+      </section>
+      <section aria-labelledby="favorites-heading">
+        <div class="favorites-heading">
+          <div>
+            <span class="listing-kicker">SAVED RENTALS</span>
+            <h2 id="favorites-heading" tabindex="-1">Places you’ve saved</h2>
+          </div>
+          <span class="listing-count" id="favorites-count">0 saved places</span>
+        </div>
+        <div class="cards favorites-grid" id="favorites-list" aria-live="polite"></div>
+      </section>
+      <section class="sample-favorites" aria-labelledby="sample-favorites-heading">
+        <div class="favorites-heading">
+          <div>
+            <span class="listing-kicker">A LITTLE INSPIRATION</span>
+            <h2 id="sample-favorites-heading">Example favorites</h2>
+          </div>
+        </div>
+        <p>These are sample properties, not your saved favorites. Tap a heart to add one to your shortlist.</p>
+        <div class="cards favorites-grid" data-property-ids="1,2,5"></div>
+      </section>
+    </main>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
