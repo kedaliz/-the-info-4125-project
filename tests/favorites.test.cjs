@@ -90,3 +90,24 @@ test("saved favorites persist across pages and can be removed", () => {
   assert.match(reopened.favorites.innerHTML, /No saved places yet/);
   assert.match(reopened.groups[0].innerHTML, /305 Eddy St/);
 });
+
+test("new properties appear in both listings and can be saved", () => {
+  const storage = new Map();
+  for (const pageName of ["index.html", "properties.html"]) {
+    const page = createPage(pageName, storage);
+    const collegetown = page.groups[0].innerHTML;
+    assert.match(collegetown, /123 Blair/);
+    assert.match(collegetown, /photos\/blair%201\.webp/);
+    assert.match(collegetown, /319 College Ave/);
+    assert.match(collegetown, /photos\/streetview\.jpeg/);
+    assert.match(collegetown, /property9\.html/);
+    assert.match(collegetown, /property10\.html/);
+  }
+  const home = createPage("index.html", storage);
+  home.toggle(9, home.groups[0]);
+  home.toggle(10, home.groups[0]);
+  const favorites = createPage("favorites.html", storage);
+  assert.match(favorites.favorites.innerHTML, /123 Blair/);
+  assert.match(favorites.favorites.innerHTML, /319 College Ave/);
+  assert.equal(favorites.count.textContent, "2 saved places");
+});

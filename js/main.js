@@ -7,6 +7,8 @@ const PROPERTIES = [
   { id: 6, name: "404 University Ave", price: "$1,200–$1,400 / person / month", page: "property6.html", img: "photos/404-university-exterior.png", manager: "Modern Living Rentals", info: "University Hill · 5.0 / 5 · 1 response" },
   { id: 7, name: "512 University Ave", price: "$700–$1,000 / person / month", page: "property7.html", img: "photos/512-university-exterior.png", manager: "Certified Properties", info: "Fall Creek / University Hill · 3.0 / 5 · 1 response" },
   { id: 8, name: "205 Dryden Rd", price: "$1,400–$1,600 / person / month", page: "property8.html", img: "photos/205-dryden-exterior.png", manager: "Dryden South", info: "Collegetown · 5.0 / 5 · 1 response" },
+  { id: 9, name: "123 Blair", price: "$1,400–$1,600 / month", page: "property9.html", img: "photos/blair%201.webp", manager: "Mark", info: "Collegetown · 1 response" },
+  { id: 10, name: "319 College Ave", price: "$1,200–$1,400 / month", page: "property10.html", img: "photos/streetview.jpeg", manager: "Avramis Rentals", info: "Collegetown · 1 response" },
 ];
 
 const KEY = "favorites";
@@ -28,7 +30,7 @@ function propertyCard(p, favs) {
   return `
     <article class="card property-card property-card-${p.id}">
       <div class="img">
-        <img src="${p.img}" alt="${p.name}">
+        ${p.img ? `<img src="${p.img}" alt="${p.name}">` : '<span class="card-photo-placeholder">Photo not available</span>'}
         <span class="property-badge">Student reviewed</span>
         <button class="favorite-toggle" type="button" data-fav="${p.id}" aria-label="${favoriteLabel}" aria-pressed="${isFav}"><span aria-hidden="true">${isFav ? "♥" : "♡"}</span></button>
       </div>

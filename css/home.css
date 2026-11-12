@@ -374,6 +374,8 @@ h2, h3 { color: var(--ink); }
 .catalog-section .property-grid .card .img,
 .favorites-grid .card .img { position: relative; height: auto; aspect-ratio: 1.8 / 1; overflow: hidden; }
 .property-card .img img { width: 100%; height: 100%; object-fit: cover; }
+.property-card-10 .img img { object-fit: contain; }
+.property-card .card-photo-placeholder { display: grid; width: 100%; height: 100%; place-items: center; background: linear-gradient(135deg, #eddbd7, #f8efdf); color: #5e4d4a; font-size: 13px; font-weight: 700; }
 .property-card .property-badge {
   position: absolute;
   top: 12px;
@@ -479,6 +481,10 @@ h2, h3 { color: var(--ink); }
 .property-card-6 .img { border-bottom-color: #db5e83; }
 .property-card-7 .img { border-bottom-color: #3a8b54; }
 .property-card-8 .img { border-bottom-color: #367f9c; }
+.property-card-9 .img { border-bottom: 5px solid #a54b37; }
+.property-card-10 .img { border-bottom: 5px solid #6b6799; }
+.home-places .property-card-9 .img { border-bottom-color: #a54b37; }
+.home-places .property-card-10 .img { border-bottom-color: #6b6799; }
 
 .favorites-page { padding-top: 48px; }
 .favorites-intro { margin-bottom: 38px; padding: 36px; border: 1px solid #f0e5d7; border-radius: 18px; background: linear-gradient(115deg, #fff5e9, #f1faf6); }

@@ -170,6 +170,8 @@ h1 { margin: 7px 0 4px; font-size: clamp(29px, 4vw, 39px); font-weight: 800; let
 
 .gallery-main { min-height: 0; }
 .gallery-side { display: grid; min-height: 0; grid-template-rows: 1fr 1fr; gap: 12px; }
+.property10-gallery .gallery-side { grid-template-rows: 1fr; }
+.property10-gallery .gallery-main img { object-fit: contain; }
 
 .photo {
   position: relative;
